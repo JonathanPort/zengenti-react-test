@@ -1,0 +1,15 @@
+.view-header {
+    width: 100%;
+    z-index: 100;
+    position: relative;
+}
+
+.view-header__inner {
+    @include wrap();
+    padding-top: 35px;
+    padding-bottom: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}

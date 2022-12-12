@@ -1,0 +1,12 @@
+.view-footer {
+    position: relative;
+}
+
+.view-footer__inner {
+    @include wrap();
+    padding-top: 80px;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

@@ -1,0 +1,90 @@
+// Basic color pallete
+$color--brand-primary-light:            #1E84CD;
+$color--brand-primary-light-contrast:   #64a1cd;
+$color--brand-primary-dark:             #264962;
+$color--brand-primary-dark-contrast:    #82bae2;
+$color--brand-white:                    #ffffff;
+$color--brand-off-white:                #F7F7F7;
+$color--brand-contrast-white:           #f1efef;
+$color--brand-contrast-white-2:         #e7e2dc;
+$color--brand-grey:                     #d3d3d3;
+$color--brand-blackish:                 #183e5a;
+$color--brand-black:                    #192A36;
+
+$themes: (
+    "light": (
+        "colors": (
+            "body": $color--brand-white,
+            "text-primary": $color--brand-black,
+            "text-contrast": $color--brand-white,
+            "heading-primary": $color--brand-primary-dark,
+            "panel": $color--brand-off-white,
+            "panel-lighter": $color--brand-white,
+            "panel-darker": $color--brand-primary-dark,
+            "panel-contrast": $color--brand-blackish,
+            "panel-transparent": rgba($color--brand-off-white, 0.85),
+            "panel-border": $color--brand-contrast-white,
+            "panel-border-2": $color--brand-contrast-white-2,
+            "panel-border-dark": $color--brand-grey,
+            "modal-bg": rgba($color--brand-blackish, 0.3),
+            "modal-bg-darker": rgba($color--brand-blackish, 0.6),
+            "btn-primary": $color--brand-primary-light,
+            "btn-neutral": $color--brand-primary-dark,
+            "btn-text": $color--brand-white,
+            "loader": $color--brand-primary-dark,
+            "input-bg": $color--brand-off-white,
+            "input-border": $color--brand-grey,
+            "input-text": $color--brand-black,
+            "input-placeholder-text": rgba($color--brand-black, 60%),
+            "menu-indicator": $color--brand-primary-light,
+            "link": $color--brand-primary-dark,
+            "selection-bg": $color--brand-primary-dark,
+            "selection-text": $color--brand-white,
+            "bullet": $color--brand-primary-light,
+        )
+    ),
+    "dark": (
+        "colors": (
+                "body": $color--brand-black,
+                "text-primary": $color--brand-contrast-white-2,
+                "text-contrast": $color--brand-black,
+                "heading-primary": $color--brand-primary-dark-contrast,
+                "panel": $color--brand-blackish,
+                "panel-lighter": #1b4b6d,
+            "panel-darker": $color--brand-primary-dark,
+            "panel-contrast": $color--brand-primary-light-contrast,
+                "panel-transparent": rgba($color--brand-primary-dark, 0.85),
+                "panel-border": $color--brand-primary-dark,
+                "panel-border-2": #375b74,
+            "panel-border-dark": $color--brand-grey,
+            "modal-bg": rgba($color--brand-blackish, 0.3),
+            "modal-bg-darker": rgba($color--brand-blackish, 0.6),
+            "btn-primary": $color--brand-primary-light,
+            "btn-neutral": $color--brand-primary-dark,
+            "btn-text": $color--brand-white,
+                "loader": $color--brand-primary-light-contrast,
+                "input-bg": #2d668e,
+                "input-border": #36719e,
+                "input-text": #adc6d9,
+                "input-placeholder-text": #6aa6d1,
+            "menu-indicator": $color--brand-primary-light,
+                "link": $color--brand-primary-dark-contrast,
+            "selection-bg": $color--brand-primary-dark,
+            "selection-text": $color--brand-white,
+            "bullet": $color--brand-primary-light,
+        )
+    )
+);
+
+@each $theme-name, $theme-vars in $themes {
+
+    $colors: map-get($theme-vars, "colors");
+
+    body.theme--#{$theme-name} {
+
+        @each $name, $color in $colors {
+            --color--#{$name}: #{$color};
+        }
+
+    }
+}

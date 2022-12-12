@@ -1,0 +1,41 @@
+// Import fonts here
+
+
+$font-weight--regular: 400;
+$font-weight--medium: 500;
+$font-weight--semibold: 600;
+$font-weight--bold: 700;
+
+$font-family--display: 'Noto Sans Display', 'Helvetica', sans-serif;
+$font-family--serif: 'Noto Serif', 'Helvetica', sans-serif;
+
+body {
+    font-family: $font-family--display;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--color--text-primary);
+    font-weight: $font-weight--regular;
+    line-height: 1.1;
+}
+
+a {
+    color: var(--color--link);
+    font-weight: $font-weight--bold;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family--serif;
+    color: var(--color--heading-primary);
+    font-weight: $font-weight--bold;
+    line-height: 1.33;
+}
+
+::selection {
+    background-color: var(--color--selection-bg);
+    color: var(--color--selection-text);
+}
