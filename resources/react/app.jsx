@@ -1,6 +1,7 @@
 import React from 'react';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import routes from './routes';
+import { BrowserRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { showAppLoadingIndicator } from './actions';
 import AppLoadingIndicator from './containers/AppLoadingIndicator';
@@ -22,11 +23,7 @@ export default class App extends React.Component
 
             <div className="app-container">
 
-                <ViewHeader />
-
                 <RouterProvider router={reactRouter} />
-
-                <ViewFooter />
 
                 <AppLoadingIndicator loaderVisibility="" />
 

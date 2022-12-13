@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+
+        <title>Ludlow University</title>
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        {{-- @include('includes.app-meta') --}}
+        @include('includes.app-meta')
 
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 

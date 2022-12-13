@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import errorView from './views/pages/error.jsx';
 import Theme from './utils/Theme';
 import AppView from './app.jsx';
 import { Provider } from 'react-redux';

@@ -1,21 +1,22 @@
-// Import fonts here
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700;800&family=Oswald:wght@300;400;500;600;700&display=swap');
 
-
+$font-weight--light: 300;
 $font-weight--regular: 400;
 $font-weight--medium: 500;
 $font-weight--semibold: 600;
 $font-weight--bold: 700;
+$font-weight--xbold: 800;
 
-$font-family--display: 'Noto Sans Display', 'Helvetica', sans-serif;
-$font-family--serif: 'Noto Serif', 'Helvetica', sans-serif;
+$font-family--primary: 'Fira Sans', 'Helvetica', sans-serif;
+$font-family--secondary: 'Oswald', 'Helvetica', sans-serif;
 
 body {
-    font-family: $font-family--display;
+    font-family: $font-family--primary;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: var(--color--text-primary);
     font-weight: $font-weight--regular;
-    line-height: 1.1;
+    line-height: 1.2;
 }
 
 a {
@@ -29,7 +30,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: $font-family--serif;
+    font-family: $font-family--secondary;
     color: var(--color--heading-primary);
     font-weight: $font-weight--bold;
     line-height: 1.33;

@@ -25,7 +25,8 @@ body {
 
 @mixin wrap() {
     width: 100%;
-    max-width: 1440px;
+    // Factor in padding
+    max-width: calc(1440px + 80px + 80px);
     margin: auto;
     padding-left: 80px;
     padding-right: 80px;
@@ -45,6 +46,12 @@ body {
         padding-right: 15px;
     }
 
+}
+
+.wrap {
+    @include wrap();
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .view-container {}
@@ -78,15 +85,16 @@ body {
     color: var(--color--btn-text);
     border: none;
     outline: none;
-    border-radius: 10px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-weight: $font-weight--bold;
-    font-size: 16px;
-    letter-spacing: 0.22px;
+    border-radius: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+    font-family: $font-family--secondary;
+    font-weight: $font-weight--regular;
+    font-size: 20px;
     text-decoration: none !important;
+    text-align: center;
     transition: transform 0.1s ease-in;
     cursor: pointer;
 
@@ -111,13 +119,60 @@ body {
 
 .btn--primary {
     background-color: var(--color--btn-primary);
+    backdrop-filter: blur(4px);
     color: var(--color--btn-text);
+    border: 1px solid;
+    border-image-slice: 1;
+    border-width: 1px;
+    border-image-source: linear-gradient(
+        98.01deg, #00C2FF 14.16%, #FF27C3 79.91%
+    );
+}
+
+
+.btn--primary-white {
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    color: var(--color--btn-text-light);
+    border: 1px solid;
+    border-image-slice: 1;
+    border-width: 1px;
+    border-image-source: linear-gradient(
+        98.01deg, #00C2FF 14.16%, #FF27C3 79.91%
+    );
 }
 
 .btn--neutral {
     background-color: var(--color--btn-neutral);
     color: var(--color--btn-text);
 }
+
+@media screen and (max-width: 992px) {
+
+    .btn {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 40px;
+        padding-right: 40px;
+        font-size: 18px;
+    }
+
+}
+
+
+@media screen and (max-width: 470px) {
+
+    .btn {
+        padding-top: 13px;
+        padding-bottom: 13px;
+        padding-left: 25px;
+        padding-right: 25px;
+        font-size: 16px;
+    }
+
+}
+
+
 
 .select {
     background-color: var(--color--input-bg);
